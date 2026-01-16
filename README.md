@@ -49,7 +49,6 @@ Follow the `README.md` file directions in each folder:
 
 - [Chemical Space Visualization](./chemspace/README.md)
 - [De Novo Drug Design](./denovo/README.md)
-- [CReM-based de novo design approaches](./crem/)
 
 You may have to run some extra commands to download and set up data for each tutorial. It is recommended that you run the Jupyter Lab/Notebook server in the current folder (repository root) for easy navigation through files and command line access:
 
