@@ -6,8 +6,8 @@ set -e
 BRANCH=${BRANCH:-main}
 
 # create the directory in Google Drive
-mkdir -p /content/drive/MyDrive/$BRANCH
-cd /content/drive/MyDrive/$BRANCH
+mkdir -p /content/drive/MyDrive/ADD-$BRANCH
+cd /content/drive/MyDrive/ADD-$BRANCH
 
 # clone the repository if not already present
 if [ -d "ADD-chemspace-denovo" ]; then
@@ -28,3 +28,5 @@ curl -o models.tar.gz https://owncloud.cesnet.cz/index.php/s/LFYPllnHszp4BLL/dow
 tar -xvzf models.tar.gz
 rm models.tar.gz
 cd ..
+
+echo "Setup complete."

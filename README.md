@@ -33,6 +33,9 @@ drive.mount('/content/drive')
 # install dependencies
 !wget https://raw.githubusercontent.com/martin-sicho/ADD-chemspace-denovo/main/colab.sh
 !bash colab.sh
+
+# go to desired directory (chemspace as example)
+%cd /content/drive/MyDrive/ADD-main/ADD-chemspace-denovo/chemspace/
 ```
 
 The script should do all your installations. After that, you can run the other code cells in this notebook. Just make sure that you are in the appropriate working directory:
