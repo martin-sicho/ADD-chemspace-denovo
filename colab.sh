@@ -2,22 +2,25 @@
 
 set -e
 
-# get the requirements.txt from github
-BRANCH="9ADD"
-curl -o requirements.txt https://raw.githubusercontent.com/martin-sicho/ADD-chemspace-denovo/$BRANCH/requirements.txt
+# set branch name to checkout
+BRANCH=${BRANCH:-main}
 
-# install the requirements
-pip install -r requirements.txt
-
-# mount Google Drive
-python -c "from google.colab import drive; drive.mount('/content/drive')"
+# create the directory in Google Drive
 mkdir -p /content/drive/MyDrive/$BRANCH
 cd /content/drive/MyDrive/$BRANCH
 
-# clone the repository
-git clone https://github.com/martin-sicho/ADD-chemspace-denovo.git
+# clone the repository if not already present
+if [ -d "ADD-chemspace-denovo" ]; then
+    echo "Repository already exists. Skipping clone."
+else
+    echo "Cloning repository..."
+    git clone https://github.com/martin-sicho/ADD-chemspace-denovo.git
+fi
+
+# install the requirements
 cd ADD-chemspace-denovo
 git checkout $BRANCH
+pip install -r requirements.txt
 
 # download the models
 cd denovo

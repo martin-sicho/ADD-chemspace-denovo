@@ -23,21 +23,26 @@ This is a more elaborate way, but it will give you access to a GPU-enabled envir
 - Select `GPU` from the `Hardware accelerator` dropdown menu
 - Click `Save`
 
-Now you can install the required packages by running the first code cell in the notebook.
+Now you can install the required packages by running the following code in the notebook:
 
 ```bash
+# mount Google Drive (optional for persistent storage)
+from google.colab import drive
+drive.mount('/content/drive')
+
+# install dependencies
 !wget https://raw.githubusercontent.com/martin-sicho/ADD-chemspace-denovo/main/colab.sh
 !bash colab.sh
 ```
 
-The script should do all your installations. After that, you can run the other code cells in the notebook. You can verify that you are in the correct working directory by running:
+The script should do all your installations. After that, you can run the other code cells in this notebook. Just make sure that you are in the appropriate working directory:
 
 ```python
 import os
 os.getcwd()
 ```
 
-And you can change it if needed:
+You can always change it if needed:
 
 ```python
 os.chdir('/path/anywhere/you/want')
