@@ -3,3 +3,4 @@ papyrus-scaffold-visualizer @ git+https://github.com/martin-sicho/papyrus-scaffo
 drugex[qsprpred] @ git+https://github.com/CDDLeiden/DrugEx.git@dev
 rdkit
 umap-learn
+xgboost==2.1.3
