@@ -17,10 +17,30 @@ pip install -r requirements.txt
 
 ### Google Colab [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://githubtocolab.com/martin-sicho/ADD-chemspace-denovo/)
 
-This is a more elaborate way, but it will give you access to a GPU-enabled environment if you have a Google account (use anonymous window in the browser to not leave a trace on the workstation). Click the banner above and once the repository is open execute the following in a new cell of the notebook you want to open:
+This is a more elaborate way, but it will give you access to a GPU-enabled environment if you have a Google account (use anonymous window in the browser to not leave a trace on the workstation). Click the banner above and once the repository is open select the desired notebook from the list. The first thing you want to do when the notebook opens is to change the runtime type to GPU:
 
+- Go to `Runtime` -> `Change runtime type`
+- Select `GPU` from the `Hardware accelerator` dropdown menu
+- Click `Save`
+
+Now you can install the required packages by running the first code cell in the notebook.
+
+```bash
+!wget https://raw.githubusercontent.com/martin-sicho/ADD-chemspace-denovo/main/colab.sh
+!bash colab.sh
 ```
 
+The script should do all your installations. After that, you can run the other code cells in the notebook. You can verify that you are in the correct working directory by running:
+
+```python
+import os
+os.getcwd()
+```
+
+And you can change it if needed:
+
+```python
+os.chdir('/path/anywhere/you/want')
 ```
 
 ## Follow Tutorials
