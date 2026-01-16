@@ -22,11 +22,16 @@ cd ADD-chemspace-denovo
 git checkout $BRANCH
 pip install -r requirements.txt
 
-# download the models
+# download pretrained model for de novo design
 cd denovo
 curl -o models.tar.gz https://owncloud.cesnet.cz/index.php/s/LFYPllnHszp4BLL/download
 tar -xvzf models.tar.gz
 rm models.tar.gz
+cd ..
+
+# download data for chemspace visualization
+cd chemspace
+curl https://owncloud.cesnet.cz/index.php/s/juPLpmojqktq0IU/download --output data.zip && unzip data.zip && rm data.zip
 cd ..
 
 echo "Setup complete."
