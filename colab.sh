@@ -24,7 +24,7 @@ pip install -r requirements.txt
 
 # download pretrained model for de novo design
 cd denovo
-curl -o models.tar.gz https://owncloud.cesnet.cz/index.php/s/LFYPllnHszp4BLL/download
+curl -o models.tar.gz https://owncloud.cesnet.cz/index.php/s/umvJ6nqzEErwoDV/download
 tar -xvzf models.tar.gz
 rm models.tar.gz
 cd ..
